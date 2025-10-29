@@ -262,8 +262,8 @@ model OrderItem {
 ## 👤 Author
 
 **Andrew Posdas**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Name](https://linkedin.com/in/yourprofile)
+- GitHub: [@aaposadas](https://github.com/aaposadas)
+- LinkedIn: [Andrew Posadas](https://www.linkedin.com/in/andrew-posadas-644065142/)
 
 ## 🙏 Acknowledgments
 
