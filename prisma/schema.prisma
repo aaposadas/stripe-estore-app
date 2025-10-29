@@ -11,8 +11,8 @@ model User {
   id        Int      @id @default(autoincrement())
   email     String   @unique
   name      String?
-  password  String?
   createdAt DateTime @default(now())
+  password  String?
   orders    Order[]
 }
 
@@ -22,23 +22,23 @@ model Product {
   description     String?
   price           Float
   imageUrl        String?
-  stripeProductId String?
-  stripePriceId   String?     @unique
   createdAt       DateTime    @default(now())
   updatedAt       DateTime    @updatedAt
+  stripePriceId   String?     @unique
+  stripeProductId String?
   orderItems      OrderItem[]
 }
 
 model Order {
   id              Int         @id @default(autoincrement())
   userId          Int?
-  user            User?       @relation(fields: [userId], references: [id], onDelete: Cascade)
-  email           String
   totalAmount     Float
-  stripeSessionId String?     @unique
   status          String      @default("PENDING")
   createdAt       DateTime    @default(now())
   updatedAt       DateTime    @updatedAt
+  email           String
+  stripeSessionId String?     @unique
+  user            User?       @relation(fields: [userId], references: [id], onDelete: Cascade)
   orderItems      OrderItem[]
 }
 
